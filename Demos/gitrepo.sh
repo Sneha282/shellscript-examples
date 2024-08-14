@@ -41,3 +41,9 @@ curl -s -X PUT -H "Authorization: token $GITHUB_TOKEN" \
   "https://api.github.com/repos/$GITHUB_USERNAME/$REPO_NAME/collaborators/$COLLABORATOR"
 
 echo "Repository setup completed successfully."
+
+
+#List the repos
+To list the repo names
+
+curl -s -H "Authorization: token $GITHUB_TOKEN"   https://api.github.com/user/repos | jq -r '.[].name'
